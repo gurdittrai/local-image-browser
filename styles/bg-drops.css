@@ -1,0 +1,50 @@
+.droplet {
+    position: fixed;
+    z-index: -1;
+    left: 10vw;
+    top: 10vh;
+    width: 10vw;
+    height: 10vw;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 10px solid #4F4D51;
+    /* animation */
+    transform: scale(0);
+    animation: droplet 8s ease-in forwards infinite;
+}
+
+.droplet:nth-child(2n) {
+    left: 30%;
+    top: 30%;
+    animation-delay: 2s;
+}
+
+.droplet:nth-child(3n) {
+    left: 50%;
+    top: 30%;
+    animation-delay: 5s;
+}
+
+.droplet:nth-child(5n) {
+    left: 20%;
+    top: 80%;
+    animation-delay: 3s;
+}
+
+.droplet:nth-child(7n) {
+    left: 70%;
+    top: 80%;
+    animation-delay: 5s;
+}
+
+@keyframes droplet {
+    from {
+        transform: scale(0);
+        opacity: 0.02;
+    }
+    to {
+        transform: scale(8);
+        opacity: 0.0;
+    }
+}

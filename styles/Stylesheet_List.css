@@ -1,0 +1,114 @@
+/* body p {
+    font-size: 0.8em;
+    line-height: 1.28;
+} */
+
+/* #wrapper {
+    background-color: #E6AA68;
+    margin: auto;
+    padding: 10px;
+    border: 5px solid #ECE4B7;
+} */
+
+/* #content_area {
+    margin: auto;
+    padding: 10px;
+} */
+
+.folder {
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    color: #fff;
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    border: 2px solid transparent;
+}
+
+.folder:hover {
+    /* text */
+    text-shadow: 
+        -1px -1px 0 #485270,  
+        1px -1px 0 #485270,
+        -1px 1px 0 #485270,
+        1px 1px 0 #485270;
+    /* bg */
+    background-image: linear-gradient(#4F6899 40%, #485270);
+    background-size: 200% 200%;
+    background-position: 0% 100%;
+    animation-name: bg-animation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* border */
+    border: 2px solid #F7F4F3;
+}
+
+.folder-icon {
+    flex: 35%;
+    flex-wrap: wrap;
+    width: 100px;
+    height: auto;
+}
+
+.folder-info {
+    flex: 65%;
+    padding: 5px;
+}
+
+.folder-title {
+    border-bottom: 2px solid #E3E3E3;
+    padding: 5px;
+    font-size: 36px;
+    /* -webkit-text-stroke: 1px rgb(172, 171, 171); */
+}
+
+.folder-date {
+    padding: 5px;
+    font-size: 20px;
+}
+
+.img {
+    width: 80%;
+    height: 200px;
+    margin: 0px 10px 0px 10px;
+    padding: 5px;
+    object-fit: cover;
+    object-position: 15% 50%;
+    border: 2px solid #080808;
+}
+
+@media screen and (max-width: 900px) {
+    .folder-icon {
+        flex: 15%;
+    }
+    .folder-info {
+        flex: 85%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .folder-icon {
+        display: none;
+    }
+    .folder-info {
+        flex: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .folder-icon {
+        display: none;
+    }
+    .folder-title {
+        border-bottom: none;
+
+    }
+    .folder-date {
+        display: none;
+    }
+}

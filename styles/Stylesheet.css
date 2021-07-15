@@ -1,0 +1,159 @@
+/* Theme */
+/* 
+    Eerie Black     rgb(26, 26, 26)     #1A1A1A
+    Dark Liver      rgb(79, 77, 81)     #4F4D51
+    Queen Blue      rgb(79, 104, 153)   #4F6899
+    Independence    rgb(72, 82, 112)    #485270
+    Deep Chestnut   rgb(191, 67, 66)    #BF4342
+    Maize Crayola   rgb(232, 197, 71)   #E8C547
+    Isabelline      rgb(247, 244, 243)  #F7F4F3
+*/
+body {
+    background-color: #F7F4F3;
+}
+
+img {
+    min-height: 100px;
+}
+
+#wrapper {
+    width: 90%;
+    background-color: rgb(26, 26, 26, 0.5);
+    margin: 0 auto;
+    padding: 10px;
+    border: 5px solid DimGrey;
+}
+
+#content_area {
+    margin: 0 auto;
+}
+
+footer {
+    /* clear: both; */
+    width: auto;
+    height: 10vh;
+    padding: 10px;
+    margin: 10px;
+    font-size: 8vh;
+    border: 5px solid #F7F4F3;
+    text-align: center;
+    color: #fff;
+    background-color: #02020B;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(20vh, auto);
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+}
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.grid-item .image {
+    width: 100%;
+    height: 100%;
+    margin: 1px;
+    padding: 1px;
+    border: 2px solid #4F4D51;
+    background-color: #4F4D51;
+    overflow: hidden;
+}
+
+.grid-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.grid-item:hover .image img {
+    transform: scale(1.5);
+    /* background-color: #7FB069; */
+    /* border: 2px solid #F7F4F3; */
+}
+
+.w-2 {
+    grid-column: span 2;
+}
+
+.w-3 {
+    grid-column: span 4;
+}
+
+.h-2 {
+    grid-row: span 2;
+}
+
+.h-3 {
+    grid-row: span 4;
+}
+
+.switch {
+    display: flex;
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    border: 1px solid #F7F4F3;
+}
+
+.switch a {
+    display: inline-block;
+    margin: auto;
+    color: #F7F4F3;
+}
+
+.switch:hover {
+    color: #BF4342;
+    background-color: #4F4D51;
+    border: 1px solid #BF4342;
+}
+
+.switch:hover a {
+    color: #BF4342;
+}
+
+.btns {
+    display: flex;
+    margin: auto;
+    padding: auto;
+}
+
+.btn {
+    flex: 30%;
+    margin: auto;
+    width: 100%;
+}
+
+.btn button {
+    margin: auto;
+    width: 100%;
+
+}
+@keyframes bg-animation {
+    from {
+        background-position: 0% 100%;
+    }
+    to {
+        background-position: 100% 0%;
+    }
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
