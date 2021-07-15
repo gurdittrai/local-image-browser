@@ -96,5 +96,5 @@ def create_images(n, loc):
             make_test_images(j, subdir)
 
 
-loc = "./assets"
+loc = "./images"
 create_images(10, loc)
